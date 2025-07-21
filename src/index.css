@@ -46,24 +46,61 @@ main {
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.737);
-  width: 800px;
+  width: 75vw;
+  
 }
 
 #player-input-box {
   background-color: black;
   padding: 20px 50px;
-  color:white;
-  display: flex;
-  justify-content: space-between;
-  gap:20px;
-}
-
-.player-box{
-  display: flex;
-  gap:10px;
-}
-
-.playerInput{
-  background-color: rgb(61, 60, 60);
   color: white;
+  display: flex;
+  width:55%;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.player-box {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.player-input,
+.player-input:focus,
+.playe-input:active {
+  border: 2px solid white;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.btn,
+btn:focus {
+  padding: 5px 10px;
+  background-color: black;
+  border: 2px solid white;
+  color: white;
+  border-radius: 4px;
+}
+
+.player-symbol {
+  font-size: 2.5rem;
+}
+
+#game-area {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  row-gap: 20px;
+  column-gap:20px ;
+}
+
+.game-box {
+  width:150px;
+  height: 150px;
+  background-color: black;
+  border-radius: 1rem;
+  padding: 10px;
 }

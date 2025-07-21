@@ -18,17 +18,17 @@ export default function Player({ name, playerSymbol }) {
     <div className="player-box">
       {isEditing ? (
         <input
-          className="playerInput"
+          className="player-input"
           type="text"
           required
           value={playerName}
           onChange={handlePlayerChange}
         />
       ) : (
-        <input readOnly className="playerInput" value={playerName} />
+        <input readOnly className="player-input" value={playerName} />
       )}
-      <button onClick={toggleEdit}>{editStatus}</button>
-      <span>{playerSymbol}</span>
+      <button className="btn" onClick={toggleEdit}>{editStatus}</button>
+      <span className="player-symbol">{playerSymbol}</span>
     </div>
   );
 }
