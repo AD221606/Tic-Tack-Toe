@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&display=swap');
+
+:root {
+  box-sizing: border-box;
+  color: white;
+  font-family: "Bitcount", system-ui;
+}
+body {
+  background: #ff0000;
+  background: url("../bg-pattern.png"),
+    linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(112, 112, 112, 1) 35%,
+      rgba(0, 0, 0, 1) 100%
+    );
+
+  background-repeat: repeat, no-repeat;
+  background-attachment: fixed;
+  background-size: auto, cover;
+}
+
+header {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  text-shadow: 0px 0px 2px rgb(255, 255, 255), 0px 0px 3px rgb(255, 255, 255);
+  font-size:1.9rem;
+}
+
+h1{
+  background-color: rgba(0, 0, 0, 0.904);
+}
+
+header img {
+  width: 190px;
+  height: 190px;
+}
