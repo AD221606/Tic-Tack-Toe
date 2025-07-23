@@ -47,6 +47,7 @@ header img {
 }
 
 main {
+  margin-top: 20px;
   display: grid;
   justify-items: center;
   background-color: rgba(0, 0, 0, 0.737);
@@ -96,6 +97,7 @@ btn:focus {
 }
 
 #game-container {
+  margin-top: 20px;
   display: grid;
   grid-template-columns:1fr;
   align-items: center;
@@ -118,4 +120,18 @@ ol {
   font-size: 180px;
   border: none;
   border-radius: 10px;
+}
+
+#logs{
+  width:400px;
+  margin-top: 20px;
+  background-color: black;
+  font-size: 20px;
+  padding: 20px;
+  border: 5px solid white;
+  border-radius: 3px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
 }

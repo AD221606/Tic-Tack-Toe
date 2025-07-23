@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 
 const initialGameboard = [
   [null, null, null],
@@ -25,6 +25,7 @@ export default function Gameboard({ playMade, plays }) {
                   onClick={() => {
                     playMade(rowIndex, colIndex);
                   }}
+                  disabled={cell !== null}
                 >
                   {cell}
                 </button>

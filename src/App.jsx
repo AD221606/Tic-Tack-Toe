@@ -1,20 +1,37 @@
 import Player from "./components/Player";
 import Gameboard from "./components/Gameboard";
 import { useState } from "react";
-// import LogMoves from "./components/LogMoves";
+import LogMoves from "./components/LogMoves";
+import { WINNING_COMBINATIONS } from "./assets/winning-combination";
+
+
+
+function deriveActivePlayer(play) {
+  let derivedPlayer = "X";
+
+  if (play.length > 0 && play[0].player === "X") {
+    derivedPlayer = "O";
+  }
+
+  return derivedPlayer;
+}
 
 function App() {
-  const [activePlayer, setActivePlayer] = useState("X");
+  // const [activePlayer, setActivePlayer] = useState("X");
   const [play, setPlay] = useState([]);
+  const activePlayer = deriveActivePlayer(play);
 
   const handlePlay = (rowIndex, colIndex) => {
-    const newPlay = [
-      { player: activePlayer, row: rowIndex, col: colIndex },
-      ...play,
-    ];
-    setPlay(newPlay);
-    const newActivePlayer = activePlayer === "X" ? "0" : "X";
-    setActivePlayer(newActivePlayer);
+    setPlay((prevPlay) => {
+      const newPlay = [
+        { player: activePlayer, row: rowIndex, col: colIndex },
+        ...play,
+      ];
+
+      deriveActivePlayer(prevPlay);
+
+      return newPlay;
+    });
   };
 
   return (
@@ -29,7 +46,7 @@ function App() {
           currentActivePlayer={activePlayer}
           playMade={handlePlay}
         />
-        {/* <LogMoves playLog={play} /> */}
+        <LogMoves playLog={play} />
       </main>
     </>
   );
